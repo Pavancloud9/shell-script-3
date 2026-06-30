@@ -2,4 +2,6 @@
 
 echo "Please enter your username"
 
-read
+read PAVAN
+
+echo "username entered is "$PAVAN"
