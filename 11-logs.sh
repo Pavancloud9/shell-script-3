@@ -27,10 +27,10 @@ then
     exit 1
 fi
 ###################################################
-dnf list installed mysql
+dnf list installed mysql     &>>$LOG_FILE_NAME
        if [ $? -ne 0 ]
     then
-        dnf install mysql -y
+        dnf install mysql -y   &>>$LOG_FILE_NAME
         FUNCTION $? "Installing...MYSQL"
         
 else
@@ -38,10 +38,10 @@ else
 fi
 
 
-dnf list installed git
+dnf list installed git   &>>$LOG_FILE_NAME
        if [ $? -ne 0 ]
     then
-        dnf install git -y
+        dnf install git -y   &>>$LOG_FILE_NAME
         FUNCTION $? "Installing...GIT" 
 else
     echo "GIT has already been...INSTALLED"
