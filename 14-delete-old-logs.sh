@@ -33,7 +33,7 @@ echo "Files to be deleted:: $FILES_TO_DELETE"
 
 
 
-while read -r read_file
+while read -r file
 do
-    echo "Deleting file: $read_file"
+    echo "Deleting file: $file"
 done <<< $FILES_TO_DELETE
