@@ -5,7 +5,7 @@ LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
-mkdir /home/ec2-user/shellscript-logs
+mkdir -p /home/ec2-user/shellscript-logs
 
 SOURCE_DIR=$1
 DEST_DIR=$2
