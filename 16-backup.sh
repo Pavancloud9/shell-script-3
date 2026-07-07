@@ -13,6 +13,7 @@ DAYS=${3:-14} # If user is not providing number of days, we are taking 14 as def
 
 USAGE(){
     echo "USAGE:: sh 16-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS>(optional)"
+    exit 1
 }
 
 if [ $# -lt 2 ]
