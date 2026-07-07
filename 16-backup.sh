@@ -34,3 +34,8 @@ then
 fi
 
 echo "Script started execting at:: $TIMESTAMP" &>>$LOG_FILE_NAME
+
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime $DAYS)
+
+echo "Files are:: $FILES"
+
