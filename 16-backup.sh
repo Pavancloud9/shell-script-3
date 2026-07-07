@@ -1,7 +1,7 @@
 #!/bin/bash
 
-LOGS_FOLDER="/var/log/shellscript-logs"
-LOG_FILE=$(echo $0 | cut -d "." -f1)    ### 13-loops
+LOGS_FOLDER="/home/ec2-user/shellscript-logs"
+LOG_FILE=$(echo $0 | cut -d "." -f1)    
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
@@ -20,5 +20,7 @@ if [ $# -lt 2 ]
 then
     USAGE
 fi
+
+mkdir /home/ec2-user/shellscript-logs
 
 echo "Script started execting at:: $TIMESTAMP" &>>$LOG_FILE_NAME
