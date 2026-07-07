@@ -19,3 +19,5 @@ if [ $# -lt 2 ]
 then
     USAGE
 fi
+
+echo "Script started execting at:: $TIMESTAMP" &>>$LOG_FILE_NAME
