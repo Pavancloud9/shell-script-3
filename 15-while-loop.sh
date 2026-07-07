@@ -1,7 +1,7 @@
 #!/bin/bash
 
-while read -r pavan 
+while read -r file 
 do
-    echo $pavan
+    echo $file
 done < 14-delete-old-logs.sh
 
