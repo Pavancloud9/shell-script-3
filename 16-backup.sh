@@ -21,4 +21,16 @@ then
     USAGE
 fi
 
+if [ ! -d $SOURCE_DIR ]
+then
+    echo "$SOURCE_DIR Does not exists"
+    exit 1
+fi
+
+if [ ! -d $DEST_DIR ]
+then
+    echo "$DEST_DIR Does not exists"
+    exit 1
+fi
+
 echo "Script started execting at:: $TIMESTAMP" &>>$LOG_FILE_NAME
