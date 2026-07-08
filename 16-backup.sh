@@ -45,9 +45,9 @@ then
     if [ -f $ZIP_FILE ]
     then
         echo "Successfully created zip file"
-        while read -r line
+        while read -r FILEPATH
         do 
-            echo "Deleting file:: $LINE"
+            echo "Deleting file:: $FILEPATH"
         done <<< $FILES
 
     else
