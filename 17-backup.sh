@@ -38,6 +38,14 @@ FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 if [ -n "$FILES" ]
 then
     echo "Files are:: $FILES"
+    ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP"
+    find $SOURCE_DIR -name "*.log" -mtime $DAYS | zip ZIP_FILE -@
+    if [ $? -ne 0 ]
+    then
+        echo "Failed to create ZIP FILE"
+    else
+        echo "Successfully created ZIP FILE"
+    fi
 else
     echo "No files are there to zip"
 fi
