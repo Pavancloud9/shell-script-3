@@ -5,5 +5,6 @@ GREET="Hello from script-1"
 source ./19-script-2.sh
 
 echo "Hello from: $MSG"
+echo "A value: $A"
 
 # bash 19-script-2.sh
