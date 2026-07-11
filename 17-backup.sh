@@ -39,7 +39,7 @@ if [ -n "$FILES" ]
 then
     echo "Files are:: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    find $SOURCE_DIR -name "*.log" -mtime $DAYS | zip $ZIP_FILE -@
+    find $SOURCE_DIR -name "*.log" -mtime $DAYS | zip -@ "$ZIP_FILE" 
     if [ -f $ZIP_FILE  ]
     then
         echo "Failed to create ZIP FILE"
