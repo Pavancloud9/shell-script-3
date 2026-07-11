@@ -1,6 +1,7 @@
 #!/bin/bash
 
 MSG=script1
+GREET="Hello from script-1"
 
 echo "Hello from: $MSG"
 
