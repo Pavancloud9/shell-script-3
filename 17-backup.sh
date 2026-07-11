@@ -39,7 +39,7 @@ if [ -n "$FILES" ]
 then
     echo "Files are:: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    find $SOURCE_DIR -name "*.log" -mtime $DAYS | zip -@ "$ZIP_FILE" 
+    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE" 
     if [ -f $ZIP_FILE  ]
     then
         echo "Successfully created ZIP FILE"
@@ -50,25 +50,3 @@ then
 else
     echo "No files are there to zip"
 fi
-
-
-# if [ -n "$FILES" ]  ### NOT EMPTY
-# then
-#     echo "Files are:: $FILES"
-#     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-#     find $SOURCE_DIR -name "*.log" -mtime $DAYS | zip -@ "$ZIP_FILE" 
-#     if [ -f $ZIP_FILE ]
-#     then
-#         echo "Successfully created zip file"
-#         while read -r FILE
-#         do 
-#             echo "Deleting file:: $FILE"
-#             rm -rf $FILE
-#         done <<< $FILES 
-#     else
-#         echo "ERROR:: Failed to create zip file"
-#         exit 1
-#     fi
-# else
-#     echo "No files to zip"
-# fi
