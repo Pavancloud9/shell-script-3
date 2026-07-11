@@ -37,7 +37,7 @@ echo "Script started execting at:: $TIMESTAMP" &>>$LOG_FILE_NAME
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [ -n "$FILES" ]
+if [ -n "$FILES" ]  ### NOT EMPTY
 then
     echo "Files are:: $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
@@ -48,17 +48,22 @@ then
         while read -r FILE
         do 
             echo "Deleting file:: $FILE"
-        done <<< $FILES
-
+            rm -rf $FILE
+        done <<< $FILES 
     else
         echo "ERROR:: Failed to create zip file"
         exit 1
     fi
-
-
 else
     echo "No files to zip"
 fi
+
+
+
+
+
+
+
 
 
 
