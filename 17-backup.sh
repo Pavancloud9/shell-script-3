@@ -45,7 +45,7 @@ then
         echo "Successfully created ZIP FILE"
       while read -r LINE
            echo "Deleting file: $LINE"
-      done < $FILES
+      done <<< $FILES
         
     else
         echo "Failed to create zip file"
