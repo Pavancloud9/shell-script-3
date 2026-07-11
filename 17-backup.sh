@@ -35,9 +35,11 @@ fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [ -f $FILES ]
-then
-    echo "Files are:: $FILES"
-else
-    echo "No files are there to zip"
-fi
+echo "Files are $FILES"
+
+# if [ -f $FILES ]
+# then
+#     echo "Files are:: $FILES"
+# else
+#     echo "No files are there to zip"
+# fi
