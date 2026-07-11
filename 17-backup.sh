@@ -18,7 +18,7 @@ USAGE(){
 
 if [ $# -lt 2 ]
 then
-    echo USAGE
+    USAGE
 fi
 
 if [ ! -d $SOURCE_DIR ]
