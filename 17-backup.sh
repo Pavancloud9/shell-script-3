@@ -44,6 +44,7 @@ then
     then
         echo "Successfully created ZIP FILE"
       while read -r LINE
+      do
            echo "Deleting file: $LINE"
       done <<< $FILES
         
