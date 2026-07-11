@@ -42,9 +42,9 @@ then
     find $SOURCE_DIR -name "*.log" -mtime $DAYS | zip -@ "$ZIP_FILE" 
     if [ -f $ZIP_FILE  ]
     then
-        echo "Failed to create ZIP FILE"
-    else
         echo "Successfully created ZIP FILE"
+    else
+        echo "Failed to create zip file"
     fi
 else
     echo "No files are there to zip"
