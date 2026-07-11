@@ -43,7 +43,10 @@ then
     if [ -f $ZIP_FILE  ]
     then
         echo "Successfully created ZIP FILE"
-        # while read -r line
+      while read -r LINE
+           echo "Deleting file: $LINE"
+      done < "$FILES" 
+        
     else
         echo "Failed to create zip file"
         exit 1
